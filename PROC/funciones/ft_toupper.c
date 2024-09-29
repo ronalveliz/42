@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/21 23:56:33 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/21 23:56:33 by marvin           ###   ########.fr       */
+/*   Created: 2024/09/29 22:48:45 by marvin            #+#    #+#             */
+/*   Updated: 2024/09/29 22:48:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-
-void *ft_memmove(void *dst, const void *src, size_t len)
+int ft_toupper(int c)
 {
-    char *d = (char *)dst;
-    const char *s = (const char *)src;
-    if (d == s)
-        return dst;
-    if (d > s)
-    {
-        while (len--)
-            d[len] = s[len];
-    }
-    else
-    {
-        while (len--)
-            *d++ = *s++;
-    }
-    return dst;
+    if (c >= 'a' && c <= 'z')
+        return c - 32;
+    return c;
+}
+
+// Prueba de ft_toupper
+int main()
+{
+    char c = 'b';
+    printf("Resultado: %c\n", ft_toupper(c));
+    return 0;
 }
