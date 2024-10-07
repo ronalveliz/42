@@ -10,29 +10,37 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include"libft.h"*/
-
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    char *d;
-    const char *s;
+	char	*d;
+	char	*s;
+
 	s = (const char *)src;
-    d = (char *)dst;
-    if (d == s)
-        return dst;
-    if (d > s)
-    {
-        while (len --)
-        {
-            d[len] = s[len];
-        }
-    }
-    else
-    {
-        while (len--)
-        {
-            *d ++ = *s ++;
-        }
-    }
-    return dst;
+	d = (char *)dst;
+	if (d == s)
+		return (dst);
+	if (d > s)
+	{
+		while (len --)
+		{
+			d[len] = s[len];
+		}
+	}
+	else
+	{
+		while (len--)
+		{
+			*d ++ = *s ++;
+		}
+	}
+	return (dst);
 }
+/*#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+    char overlap[50] = "Overlap Example";
+    ft_memmove(overlap + 2, overlap, strlen(overlap) + 1);
+    printf("ft_memmove (overlap): %s\n", overlap);  // Output: OvOverlap Example
+    return 0;
+}*/

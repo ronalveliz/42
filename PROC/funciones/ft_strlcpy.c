@@ -12,24 +12,23 @@
 
 /*#include <stddef.h>*/
 
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    size_t i = 0;
+	size_t	i;
 
-    if (dstsize > 0)
-    {
-        while (src[i] && i < dstsize - 1)
-        {
-            dst[i] = src[i];
-            i++;
-        }
-        dst[i] = '\0';
-    }
-
-    while (src[i])
-        i++;
-    
-    return i;
+	i = 0;
+	if (size > 0)
+	{
+		while (src[i] && i < size - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	while (src[i])
+		i++;
+	return (i);
 }
 /*copia un strean a un memoria de tamaño determinado 
 incluido el nulo

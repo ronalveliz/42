@@ -10,17 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        return c - 32;
-    return c;
+	if (c >= 'a' && c <= 'z')
+	{
+		return (c - 32);
+	}
+	return (c);
 }
 
-// Prueba de ft_toupper
-int main()
+/*// Ejemplo main
+#include <stdio.h>
+int main(void)
 {
-    char c = 'b';
-    printf("Resultado: %c\n", ft_toupper(c));
+    char c = 'a';
+    printf("ft_toupper: %c\n", ft_toupper(c));  // Output: A
     return 0;
-}
+}*/

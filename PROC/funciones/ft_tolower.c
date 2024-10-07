@@ -10,17 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        return c + 32;
-    return c;
+	if (c >= 'A' && c <= 'Z')
+	{
+		return (c + 32);
+	}
+	return (c);
 }
 
-// Prueba de ft_tolower
+/*// Prueba de ft_tolower
 int main()
 {
     char c = 'B';
     printf("Resultado: %c\n", ft_tolower(c));
     return 0;
-}
+}*/
