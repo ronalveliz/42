@@ -10,13 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-	void	*ft_memset(void *s, int c, size_t n){
-		unsigned char *str = s;
-		size_t v;
-		v = 0;
-	while (v < n){
-		*str = (unsigned char)c;
+#include <stddef.h>
+
+void	*ft_memset(void *s, int c, size_t n)
+{
+	unsigned char	*ptr;
+	size_t			i;
+
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = (unsigned char)c;
+		i++;
 	}
-	*str ++;
 	return (s);
 }
+
+/*#include <stdio.h>
+int main(void)
+{
+    char str[50] = "Hello World";
+    ft_memset(str + 6, '.', 3);
+    printf("ft_memset: %s\n", str);  // Output: Hello ...
+    return 0;
+}*/
