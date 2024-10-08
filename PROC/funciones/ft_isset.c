@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isset.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kitsune <kitsune@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 23:35:28 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/07 23:38:03 by kitsune          ###   ########.fr       */
+/*   Created: 2024/10/08 18:14:10 by dveliz-c          #+#    #+#             */
+/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*include "libft.h";*/
 
 static int	ft_isset(char c, char const *set)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (set[i])
-    {
-        if (c == set[i])
-            return (1);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }

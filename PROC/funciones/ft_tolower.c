@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 22:50:30 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/29 22:50:30 by marvin           ###   ########.fr       */
+/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#include <stdio.h>
 
 int	ft_tolower(int c)
 {
@@ -20,9 +22,9 @@ int	ft_tolower(int c)
 }
 
 /*// Prueba de ft_tolower
-int main()
+int	main(void)
 {
-    char c = 'B';
-    printf("Resultado: %c\n", ft_tolower(c));
-    return 0;
+	char c = 'B';
+	printf("Resultado: %c\n", ft_tolower(c));
+	return (0);
 }*/

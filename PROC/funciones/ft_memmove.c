@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/21 23:56:33 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/21 23:56:33 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/08 18:18:28 by dveliz-c          #+#    #+#             */
+/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*include "libft.h";*/
+//#include <stdio.h>
+//#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -21,7 +25,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (dst);
 	if (d > s)
 	{
-		while (len --)
+		while (len--)
 		{
 			d[len] = s[len];
 		}
@@ -30,17 +34,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len--)
 		{
-			*d ++ = *s ++;
+			*d++ = *s++;
 		}
 	}
 	return (dst);
 }
 /*#include <stdio.h>
 #include <string.h>
-int main(void)
+
+int	main(void)
 {
-    char overlap[50] = "Overlap Example";
-    ft_memmove(overlap + 2, overlap, strlen(overlap) + 1);
-    printf("ft_memmove (overlap): %s\n", overlap);  // Output: OvOverlap Example
-    return 0;
+	char overlap[50] = "Overlap Example";
+	ft_memmove(overlap + 2, overlap, strlen(overlap) + 1);
+	printf("ft_memmove (overlap): %s\n", overlap);  // Output: OvOverlap Example
+	return (0);
 }*/

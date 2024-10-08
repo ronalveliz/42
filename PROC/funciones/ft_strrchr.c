@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kitsune <kitsune@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 21:46:52 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/07 22:08:34 by kitsune          ###   ########.fr       */
+/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stddef.h>
+//#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -36,11 +37,12 @@ char	*ft_strrchr(const char *s, int c)
 
 /*/ Ejemplo main
 #include <stdio.h>
-int main(void)
+
+int	main(void)
 {
-    char str[] = "Hello World";
-    char *result = ft_strrchr(str, 'o');
-    if (result)
-        printf("ft_strrchr: %s\n", result);  // Output: orld
-    return 0;
+	char str[] = "Hello World";
+	char *result = ft_strrchr(str, 'o');
+	if (result)
+		printf("ft_strrchr: %s\n", result);  // Output: orld
+	return (0);
 }*/

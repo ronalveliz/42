@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 22:08:42 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/29 22:08:42 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/08 18:41:34 by dveliz-c          #+#    #+#             */
+/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stddef.h>
+//#include <stdio.h>
+//#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -40,13 +42,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 /* Ejemplo main
 #include <stdio.h>
-int main(void)
+
+int	main(void)
 {
-    char dst[20] = "Hello";
-    char src[] = " World";
-    size_t len = ft_strlcat(dst, src, sizeof(dst));
-    printf("ft_strlcat: %s (len: %zu)\n", dst, len); 
+	char	dst[20] = "Hello";
+	char	src[] = " World";
+	size_t	len;
+
+	len = ft_strlcat(dst, src, sizeof(dst));
+	printf("ft_strlcat: %s (len: %zu)\n", dst, len);
 	Output: Hello World (len: 11)
-    return 0;
+	return (0);
 }
 */
