@@ -6,20 +6,21 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 21:51:44 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 00:34:53 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stddef.h>*/
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-
-	i = 0;
+	size_t	src_len;
+	
+	src_len = ft_strlen(src);
 	if (size > 0)
 	{
+		i = 0;
 		while (src[i] && i < size - 1)
 		{
 			dst[i] = src[i];
@@ -27,12 +28,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		dst[i] = '\0';
 	}
-	while (src[i])
-		i++;
-	return (i);
+	
+	return (src_len);
 }
 /*copia un strean a un memoria de tamaño determinado
 incluido el nulo
+#include <stddef.h>
 int	main(void)
 {
 	char dst[10];

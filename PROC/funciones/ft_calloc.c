@@ -6,48 +6,51 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:07:21 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/08 18:57:33 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/09 23:30:15 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdlib.h>
-/*include "libft.h";*/
+#include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void *ft_calloc(size_t count, size_t size)
 {
-	size_t	total_size;
-	void	*ptr;
-	size_t	i;
-
-	total_size = count * size;
-	ptr = malloc(total_size);
-	if (!ptr)
-		return (NULL);
-	i = 0;
-	while (i < total_size)
-	{
-		((unsigned char *)ptr)[i] = 0;
-		i++;
-	}
-	return (ptr);
+    void *ptr;
+	ptr = malloc(count * size);
+    if (!ptr)
+        return NULL;
+    ft_bzero(ptr, count * size);
+    return ptr;
 }
 
+
 /*// Ejemplo main
-#include <stdio.h>
+#include <stdio.h>      // Para printf
+#include "libft.h"      // Para ft_calloc y ft_bzero
 
-int	main(void)
+int main(void)
 {
-	int		*arr;
-	size_t	n;
-	size_t	i;
+    size_t count = 5;  // Número de elementos en el arreglo
+    size_t size = sizeof(int);  // Tamaño de cada elemento (en este caso, un entero)
+    
+    // Llama a ft_calloc para reservar memoria
+    int *array = (int *)ft_calloc(count, size);
+    
+    if (array == NULL) // Verifica si la asignación fue exitosa
+    {
+        printf("Error: no se pudo asignar memoria.\n");
+        return 1;  // Termina el programa con un código de error
+    }
+    
+    // Imprime los valores del arreglo para verificar que están inicializados a cero
+    printf("Valores del arreglo inicializados a cero:\n");
+    for (size_t i = 0; i < count; i++)
+    {
+        printf("array[%zu] = %d\n", i, array[i]);
+    }
 
-	n = 5;
-	arr = (int *)ft_calloc(n, sizeof(int));
-	if (!arr)
-		return (1); // Error en la asignación de memoria
-	for (i = 0; i < n; i++)
-		printf("arr[%zu] = %d\n", i, arr[i]);
-			// Todos los valores deberían ser 0
-	free(arr); // Liberar memoria
-	return (0);
+    // Liberar la memoria reservada
+    free(array);
+
+    return 0;  // Termina el programa con éxito
+}
 }*/

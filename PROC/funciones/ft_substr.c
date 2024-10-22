@@ -6,39 +6,39 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 23:06:44 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/10 01:03:01 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "stdlib.h"
-//#include <string.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
+	char	*subcadena;
 	size_t	i;
-	size_t	s_len;
+	unsigned int	slen;;
 
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(s);
-	if (start >= s_len)
-		return (strdup(""));
-	if (len > s_len - start)
-		len = s_len - start;
-	substr = (char *)ft_malloc(sizeof(char) * (len + 1));
-	if (!substr)
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_calloc(1,sizeof(char)));
+	if (len > slen - start)
+		len = slen - start;
+	subcadena = (char *)malloc(sizeof(char) * (len + 1));
+	if (!subcadena)
 		return (NULL);
 	i = 0;
 	while (i < len)
 	{
-		substr[i] = s[start + i];
+		subcadena[i] = s[start + i];
 		i++;
 	}
-	substr[len] = '\0';
-	return (substr);
+	subcadena[len] = '\0';
+	return (subcadena);
 }
-/*#include <stdio.h>
+/*ejemplo de main crear una cadena apartir de un inicio-numero de datos 
+#include <stdio.h>
 
 int	main(void)
 {

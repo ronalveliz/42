@@ -6,11 +6,11 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 22:48:45 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:34:46 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -21,7 +21,7 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-/*// Ejemplo main
+/*// Ejemplo main minúscula a mayuscula
 #include <stdio.h>
 
 int	main(void)

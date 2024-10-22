@@ -6,25 +6,22 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 21:46:52 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/22 20:02:35 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stddef.h>
-//#include "libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
+	
+	i = ft_strlen(s);
 	while (i > 0)
 	{
-		if (s[i] == (char)c)
+		if (s[i - 1] == (char)c)
 		{
-			return ((char *)(s + i));
+			return ((char *)(s + i - 1));
 		}
 		i--;
 	}
@@ -35,7 +32,8 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-/*/ Ejemplo main
+/*
+// Ejemplo main  ultima aparicion del caracter emviado #include <stddef.h>
 #include <stdio.h>
 
 int	main(void)

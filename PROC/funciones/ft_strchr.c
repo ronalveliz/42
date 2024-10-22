@@ -6,12 +6,11 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 20:13:27 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/22 19:28:34 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h> encontrar el primer caracter
-//#include "libft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -30,6 +29,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
+//#include <stdio.h> encontrar el primer caracter
 /*int main()
 {
 	char	*s;

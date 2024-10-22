@@ -6,12 +6,12 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 00:18:13 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/22 22:26:53 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include "libft.h"
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -30,6 +30,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 
 /* Ejemplo main Compara los primeros `n` caracteres
+#include <stdio.h>
+
 int	main(void)
 {
 	char str1[] = "Hello";

@@ -6,43 +6,42 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 22:47:35 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/08 19:04:51 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/22 22:39:26 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stddef.h>
-//#include <stdio.h>
-//#include "libft.h"
+#include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *cadbig, const char *sub_cad, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	cad_Len;
 
-	if (!*needle)
-		return ((char *)haystack);
+	if (!*sub_cad)
+		return ((char *)cadbig);
+			
+	cad_Len = ft_strlen(sub_cad);
+	if (cad_Len > len)
+		return (NULL);
 	i = 0;
-	while (haystack[i] && i < len)
+	while (cadbig[i] && i + cad_Len <= len)
 	{
-		j = 0;
-		while (needle[j] && haystack[i + j] && (i + j) < len
-			&& haystack[i + j] == needle[j])
-			j++;
-		if (!needle[j])
-			return (char *)(haystack + i);
+		if (ft_strncmp(&cadbig[i], sub_cad, cad_Len) == 0)
+			return ((char *)(cadbig + i));
 		i++;
 	}
 	return (NULL);
 }
 
-/*// Ejemplo main
+/*// Ejemplo main busca la primera coincidencia del caracter enviado
+#include <stddef.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	char haystack[] = "Hello World";
-	char needle[] = "World";
-	char *result = ft_strnstr(haystack, needle, 11);
+	char cadbig[] = "Hello World";
+	char sub_cad[] = "World";
+	char *result = ft_strnstr(cadbig, sub_cad, 11);
 	if (result)
 		printf("ft_strnstr: %s\n", result);  // Output: World
 	return (0);

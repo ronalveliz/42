@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 19:45:18 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/22 22:39:17 by dveliz-c         ###   ########.fr       */
+/*   Created: 2024/10/23 00:46:00 by dveliz-c          #+#    #+#             */
+/*   Updated: 2024/10/23 00:53:26 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	len;
+	unsigned int	i;
 
-	len = 0;
-	while (c[len] != '\0')
+    if (!s || !f)
+        return;
+	i = 0;
+	while (s[i])
 	{
-		len++;
+		f(i, &s[i]);
+        i++ ;
 	}
-	return (len);
 }
 /*
 int	main(void)
 {
-	printf("%zu", ft_strlen("asdfg"));
-}*/
+	char str[] = "hello world";
+
+	printf("Antes de ft_striteri: %s\n", str);
+
+	// Aplicamos ft_striteri con la función to_uppercase
+	ft_striteri(str, to_uppercase);
+
+	printf("Después de ft_striteri: %s\n", str);
+
+	return (0);
+}
+*/

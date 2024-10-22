@@ -6,13 +6,11 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:34:50 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/08 18:59:05 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 00:44:15 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdlib.h>
-//#include <string.h>
-//#include "libft.h"
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -25,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	new_str = (char *)ft_malloc(sizeof(char) * (s1_len + s2_len + 1));
+	new_str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (!new_str)
 		return (NULL);
 	i = 0;
@@ -43,7 +41,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_str[i + j] = '\0';
 	return (new_str);
 }
-/*#include <stdio.h>
+/*
+#include <stdio.h>
+#include <stdlib.h>
 // concatenar 2 cadenas   tomando como base la primera
 int	main(void)
 {

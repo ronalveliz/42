@@ -6,13 +6,11 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:41:34 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/08 18:54:54 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 00:42:54 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stddef.h>
-//#include <stdio.h>
-//#include "libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -23,11 +21,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dst_len = 0;
 	src_len = 0;
-	while (dst[dst_len] && dst_len < dstsize)
-		dst_len++;
-	while (src[src_len])
-		src_len++;
-	if (dst_len == dstsize)
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (dstsize <= dst_len)
 		return (dstsize + src_len);
 	i = dst_len;
 	j = 0;
@@ -40,8 +36,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (dst_len + src_len);
 }
-/* Ejemplo main
+/* Ejemplo main calcular la longitud de cadenas
 #include <stdio.h>
+#include <stddef.h>
 
 int	main(void)
 {

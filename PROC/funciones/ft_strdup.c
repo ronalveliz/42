@@ -6,13 +6,11 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:34:03 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/08 18:58:06 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 00:56:53 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdlib.h>
-//#include <string.h>
-//#include "libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
@@ -36,8 +34,10 @@ char	*ft_strdup(const char *s1)
 	return (dup);
 }
 
-/*// Ejemplo main
+/*// Ejemplo main  crea una copia de una cadena 
+dada y devuelve un puntero s esa nueva cadena
 #include <stdio.h>
+#include <stdlib.h>
 
 int	main(void)
 {
