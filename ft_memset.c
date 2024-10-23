@@ -1,44 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 21:51:44 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/23 00:34:53 by dveliz-c         ###   ########.fr       */
+/*   Created: 2024/09/17 18:42:15 by dveliz-c          #+#    #+#             */
+/*   Updated: 2024/10/23 21:11:06 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
-	size_t	src_len;
-	
-	src_len = ft_strlen(src);
-	if (size > 0)
+	unsigned char	*ptr;
+	size_t			i;
+
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
 	{
-		i = 0;
-		while (src[i] && i < size - 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		ptr[i] = (unsigned char)c;
+		i++;
 	}
-	
-	return (src_len);
+	return (s);
 }
-/*copia un strean a un memoria de tamaño determinado
-incluido el nulo
+/*
 #include <stddef.h>
+#include <stdio.h>
+#include <string.h>
+
 int	main(void)
 {
-	char dst[10];
-	char *src = "Hello";
-	size_t len = ft_strlcpy(dst, src, 10);
-	printf("Resultado: %s, Longitud: %zu\n", dst, len);
+	char str[50] = "Hello World";
+	ft_memset(str + 6, '.', 3);
+	printf("ft_memset: %s\n", str);  // Output: Hello ...
 	return (0);
 }*/

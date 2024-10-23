@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:41:34 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/23 00:42:54 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 20:59:51 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dst_len;
 	size_t	src_len;
 
-	dst_len = 0;
-	src_len = 0;
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dstsize <= dst_len)
@@ -37,8 +35,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 /* Ejemplo main calcular la longitud de cadenas
-#include <stdio.h>
 #include <stddef.h>
+#include <stdio.h>
 
 int	main(void)
 {

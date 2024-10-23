@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:34:50 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/23 00:44:15 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 21:03:59 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new_str;
 	size_t	s1_len;
 	size_t	s2_len;
+	size_t	i;
+	size_t	j;
 
-	size_t i, j;
 	if (!s1 || !s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
@@ -44,6 +45,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /*
 #include <stdio.h>
 #include <stdlib.h>
+
 // concatenar 2 cadenas   tomando como base la primera
 int	main(void)
 {

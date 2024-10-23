@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 22:47:35 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/22 22:39:26 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 20:57:43 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,22 @@
 char	*ft_strnstr(const char *cadbig, const char *sub_cad, size_t len)
 {
 	size_t	i;
-	size_t	cad_Len;
+	size_t	cadlen;
 
 	if (!*sub_cad)
 		return ((char *)cadbig);
-			
-	cad_Len = ft_strlen(sub_cad);
-	if (cad_Len > len)
+	cadlen = ft_strlen(sub_cad);
+	if (cadlen > len)
 		return (NULL);
 	i = 0;
-	while (cadbig[i] && i + cad_Len <= len)
+	while (cadbig[i] && i + cadlen <= len)
 	{
-		if (ft_strncmp(&cadbig[i], sub_cad, cad_Len) == 0)
+		if (ft_strncmp(&cadbig[i], sub_cad, cadlen) == 0)
 			return ((char *)(cadbig + i));
 		i++;
 	}
 	return (NULL);
 }
-
 /*// Ejemplo main busca la primera coincidencia del caracter enviado
 #include <stddef.h>
 #include <stdio.h>

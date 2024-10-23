@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 23:33:05 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/22 19:39:44 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 20:53:34 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	cadfinal[i] = '\0';
 	return (cadfinal);
 }
-/*ejemplo de main 
+/*ejemplo de main
 #include <stdio.h>
 
-int	main(void) 
+int	main(void)
 {
 	char *s1 = "   ---Hello, world!---   ";
 	char *set = " -";

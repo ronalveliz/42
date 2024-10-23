@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:40:12 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/22 22:42:25 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 20:58:17 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 /*
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    char *result = ft_strmapi("abcd", example_func);
-    if (result)
-    {
-        printf("Resultado: %s\n", result); // Muestra el resultado
-        free(result); // No olvides liberar la memoria asignada
-    }
-    return 0;
+	char *result = ft_strmapi("abcd", example_func);
+	if (result)
+	{
+		printf("Resultado: %s\n", result); // Muestra el resultado
+		free(result); // No olvides liberar la memoria asignada
+	}
+	return (0);
 }*/

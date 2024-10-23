@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 18:42:15 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/23 01:02:57 by dveliz-c         ###   ########.fr       */
+/*   Created: 2024/10/01 00:18:13 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/23 20:58:04 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	size_t	i;
 
-	ptr = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	while (i < n && (s1[i] || s2[i]))
 	{
-		ptr[i] = (unsigned char)c;
+		if (s1[i] != s2[i])
+		{
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		}
 		i++;
 	}
-	return (s);
+	return (0);
 }
-/*
+
+/* Ejemplo main Compara los primeros `n` caracteres
 #include <stdio.h>
-#include <stddef.h>
-#include <string.h>
 
 int	main(void)
 {
-	char str[50] = "Hello World";
-	ft_memset(str + 6, '.', 3);
-	printf("ft_memset: %s\n", str);  // Output: Hello ...
+	char str1[] = "Hello";
+	char str2[] = "Hellp";
+	int result = ft_strncmp(str1, str2, 4);
+	printf("ft_strncmp: %d\n", result);  Output: 0, las primeras
+										4 letras son iguales
 	return (0);
 }*/

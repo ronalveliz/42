@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 01:04:28 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/23 01:07:46 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/23 21:07:12 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ int	main(void)
 		i++;
 	}
 	free(result);  // También liberamos el arreglo de punteros
-
 	return (0);
 }
 }*/

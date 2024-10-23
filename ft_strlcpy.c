@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 00:18:13 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/22 22:26:53 by dveliz-c         ###   ########.fr       */
+/*   Created: 2024/09/29 21:51:44 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/23 20:59:00 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	srclen;
 
-	i = 0;
-	while (i < n && (s1[i] || s2[i]))
+	srclen = ft_strlen(src);
+	if (size > 0)
 	{
-		if (s1[i] != s2[i])
+		i = 0;
+		while (src[i] && i < size - 1)
 		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+			dst[i] = src[i];
+			i++;
 		}
-		i++;
+		dst[i] = '\0';
 	}
-	return (0);
+	return (srclen);
 }
-
-/* Ejemplo main Compara los primeros `n` caracteres
-#include <stdio.h>
+/*copia un strean a un memoria de tamaño determinado
+incluido el nulo
+#include <stddef.h>
 
 int	main(void)
 {
-	char str1[] = "Hello";
-	char str2[] = "Hellp";
-	int result = ft_strncmp(str1, str2, 4);
-	printf("ft_strncmp: %d\n", result);  Output: 0, las primeras
-										4 letras son iguales
+	char dst[10];
+	char *src = "Hello";
+	size_t len = ft_strlcpy(dst, src, 10);
+	printf("Resultado: %s, Longitud: %zu\n", dst, len);
 	return (0);
 }*/
