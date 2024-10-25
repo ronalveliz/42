@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 20:13:27 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/22 19:28:34 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/25 22:02:55 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	unsigned char	l;
+
+	l = (unsigned char)c;
+	while (*s)
 	{
-		if (*s == (char)c)
+		if (*s == l)
 		{
 			return ((char *)s);
 		}

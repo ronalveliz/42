@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 22:47:35 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/23 20:57:43 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/25 21:45:54 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,28 @@ char	*ft_strnstr(const char *cadbig, const char *sub_cad, size_t len)
 	size_t	i;
 	size_t	cadlen;
 
-	if (!*sub_cad)
+	if (*sub_cad == '\0' || cadbig == sub_cad)
 		return ((char *)cadbig);
 	cadlen = ft_strlen(sub_cad);
-	if (cadlen > len)
-		return (NULL);
 	i = 0;
-	while (cadbig[i] && i + cadlen <= len)
+	while (cadbig[i] && i < len)
 	{
-		if (ft_strncmp(&cadbig[i], sub_cad, cadlen) == 0)
-			return ((char *)(cadbig + i));
+		if (cadbig[i] == *sub_cad)
+		{
+			if (ft_strncmp(&cadbig[i], sub_cad, cadlen) == 0)
+			{
+				if (i + cadlen > len)
+					return (NULL);
+				return ((char *)&cadbig[i]);
+			}
+		}
 		i++;
 	}
 	return (NULL);
 }
-/*// Ejemplo main busca la primera coincidencia del caracter enviado
+
+/*// Ejemplo de uso de la función ft_strnstr crea subcadenas a partir de la 
+cadena principal
 #include <stddef.h>
 #include <stdio.h>
 

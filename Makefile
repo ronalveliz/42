@@ -6,7 +6,7 @@
 #    By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 19:11:45 by dveliz-c          #+#    #+#              #
-#    Updated: 2024/10/24 21:24:53 by dveliz-c         ###   ########.fr        #
+#    Updated: 2024/10/25 21:50:20 by dveliz-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ ft_putchar_fd.c \
 ft_putstr_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c \
+ft_split.c
 
 OBJS = $(SRCS:.c=.o)
 

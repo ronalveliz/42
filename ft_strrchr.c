@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 21:46:52 by kitsune           #+#    #+#             */
-/*   Updated: 2024/10/23 20:53:51 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/25 21:09:09 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 
 	i = ft_strlen(s);
+	if ((char)c == '\0')
+		return ((char *)(s + i));
 	while (i > 0)
 	{
 		if (s[i - 1] == (char)c)
