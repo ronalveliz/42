@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 19:45:18 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/24 20:40:46 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/25 19:52:51 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *c)
 {
-	signed	len;
+	size_t	len;
 
 	len = 0;
 	while (c[len] != '\0')

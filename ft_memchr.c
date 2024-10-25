@@ -6,7 +6,7 @@
 /*   By: dveliz-c <dveliz-c@estudiante.42madrid.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:15:22 by dveliz-c          #+#    #+#             */
-/*   Updated: 2024/10/24 20:41:29 by dveliz-c         ###   ########.fr       */
+/*   Updated: 2024/10/25 19:53:38 by dveliz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
