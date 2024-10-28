@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		*d++ = *s++;
 	return (dst);
 }
-
+//realiza una copia para delante pediendo datos
 /*int main(void)
 {
 	char src[50] = "Source String";
