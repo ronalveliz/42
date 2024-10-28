@@ -38,8 +38,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 /*#include <stdio.h>
+realiza una copia de  los datos en una temporal y con el inicio lo pegamos .
 #include <string.h>
-
 int	main(void)
 {
 	char overlap[50] = "Overlap Example";
